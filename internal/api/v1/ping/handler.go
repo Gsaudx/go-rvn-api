@@ -12,7 +12,7 @@ func PingHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
-	// Create a standardized response including HATEOAS links.
+	//Using standardized response
 	resp := common.Response{
 		Status:  "success",
 		Code:    http.StatusOK,

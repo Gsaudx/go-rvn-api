@@ -4,13 +4,12 @@ import (
 	"net/http"
 
 	"github.com/gsaudx/api-go-project/internal/api/v1/ping"
-	// Import additional endpoints here when needed, e.g.:
-	// "github.com/gsaudx/api-go-project/internal/api/v1/users"
+	//TODO Import additional endpoints here when needed
 )
 
 // RegisterRoutes aggregates and registers all v1 API endpoint routes.
 func RegisterRoutes(mux *http.ServeMux) {
 	ping.RegisterRoutes(mux)
-	// Add additional route registrations here, e.g.:
-	// users.RegisterRoutes(mux)
+	//TODO Add additional route registrations here, e.g.:
+	//TODO users.RegisterRoutes(mux)
 }

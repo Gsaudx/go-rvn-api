@@ -13,4 +13,5 @@ func LoggingMiddleware(next http.Handler) http.Handler {
 		next.ServeHTTP(w, r)
 		log.Printf("%s %s completed in %v", r.Method, r.URL.Path, time.Since(start))
 	})
+	//TODO Implement the logging of the request details
 }
