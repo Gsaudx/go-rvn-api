@@ -11,6 +11,6 @@ import (
 // RegisterRoutes aggregates and registers all v1 API endpoint routes.
 func RegisterRoutes(mux *http.ServeMux) {
 	ping.RegisterRoutes(mux)
-	// Add additional route registrations here, e.g.:
-	// users.RegisterRoutes(mux)
+	//TODO Add additional route registrations here, e.g.:
+	//TODO users.RegisterRoutes(mux)
 }

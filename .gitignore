@@ -32,3 +32,6 @@ Thumbs.db
 
 # Go specific
 /go.sum
+
+# Environment variables
+.env
