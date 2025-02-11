@@ -9,10 +9,10 @@ import (
 	"syscall"
 	"time"
 
-	v1routes "github.com/gsaudx/api-go-project/internal/api/v1/routes"
-	"github.com/gsaudx/api-go-project/internal/config"
-	"github.com/gsaudx/api-go-project/internal/middlewares"
-	pkgmiddlewares "github.com/gsaudx/api-go-project/pkg/middlewares"
+	v1routes "github.com/gsaudx/go-tasks-api/internal/api/v1/routes"
+	"github.com/gsaudx/go-tasks-api/internal/config"
+	"github.com/gsaudx/go-tasks-api/internal/middlewares"
+	pkgmiddlewares "github.com/gsaudx/go-tasks-api/pkg/middlewares"
 )
 
 func main() {
