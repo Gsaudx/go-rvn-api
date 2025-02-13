@@ -11,6 +11,7 @@ import (
 
 	v1routes "github.com/gsaudx/go-tasks-api/internal/api/v1/routes"
 	"github.com/gsaudx/go-tasks-api/internal/config"
+	"github.com/gsaudx/go-tasks-api/internal/database"
 	"github.com/gsaudx/go-tasks-api/internal/middlewares"
 	pkgmiddlewares "github.com/gsaudx/go-tasks-api/pkg/middlewares"
 )
@@ -49,6 +50,9 @@ func main() {
 			log.Fatalf("Server listen error: %v", err)
 		}
 	}()
+
+	// Connect to the database
+	database.Connect()
 
 	// Wait for an interrupt to gracefully shut down.
 	quit := make(chan os.Signal, 1)
