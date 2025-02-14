@@ -10,13 +10,18 @@ import (
 )
 
 func Connect() (*pgx.Conn, error) {
-	user := os.Getenv("user")
-	password := os.Getenv("password")
-	host := os.Getenv("host")
-	port := os.Getenv("port")
-	dbname := os.Getenv("dbname")
+	DB_USER := os.Getenv("DB_USER")
+	DB_PASSWORD := os.Getenv("DB_PASSWORD")
+	DB_HOST := os.Getenv("DB_HOST")
+	DB_PORT := os.Getenv("DB_PORT")
+	DB_NAME := os.Getenv("DB_NAME")
 
-	connStr := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=require", user, password, host, port, dbname)
+	sslmode := "require"
+	if DB_HOST == "localhost" || DB_HOST == "127.0.0.1" || DB_HOST == "db" {
+		sslmode = "disable"
+	}
+
+	connStr := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=%s", DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, sslmode)
 
 	conn, err := pgx.Connect(context.Background(), connStr)
 	if err != nil {

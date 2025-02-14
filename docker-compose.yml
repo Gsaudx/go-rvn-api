@@ -1,8 +1,29 @@
 version: '3.8'
+
 services:
-  api:
+  app:
     build: .
     ports:
-      - "8080:8080"
+      - "8080:8080" # Adjust the port as needed
     environment:
-      - PORT=8080 
+      - user=${DB_USER}
+      - password=${DB_PASSWORD}
+      - host=${DB_HOST}
+      - port=${DB_PORT}
+      - dbname=${DB_NAME}
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

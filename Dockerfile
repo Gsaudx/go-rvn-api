@@ -1,21 +1,23 @@
-# Build Stage
-FROM golang:1.23.6 as builder
+FROM golang:1.23.6 AS builder
 
-WORKDIR /app
-# Cache go modules.
+WORKDIR /go-tasks-api
+
 COPY go.mod go.sum ./
+
 RUN go mod download
 
-# Copy the source code and build the binary.
 COPY . .
-RUN CGO_ENABLED=0 go build -o api-go-project ./cmd/api
 
-# Final Stage: minimal runtime environment.
-FROM alpine:latest
-RUN apk --no-cache add ca-certificates
+WORKDIR /go-tasks-api/cmd/api
 
-WORKDIR /root/
-COPY --from=builder /app/api-go-project .
+RUN go build -o ../../main .
 
-EXPOSE 8080
-CMD ["./api-go-project"] 
+FROM golang:1.23.6
+
+WORKDIR /app
+
+COPY --from=builder /go-tasks-api/main .
+COPY .env .env
+
+# Command to run the executable
+CMD ["./main"]
