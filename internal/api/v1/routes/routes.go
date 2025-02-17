@@ -3,9 +3,9 @@ package routes
 import (
 	"net/http"
 
-	"github.com/gsaudx/go-tasks-api/internal/api/v1/ping"
+	"github.com/gsaudx/go-rvn-api/internal/api/v1/ping"
 	// Import additional endpoints here when needed, e.g.:
-	// "github.com/gsaudx/go-tasks-api/internal/api/v1/users"
+	// "github.com/gsaudx/go-rvn-api/internal/api/v1/users"
 )
 
 // RegisterRoutes aggregates and registers all v1 API endpoint routes.

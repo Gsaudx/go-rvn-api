@@ -1,6 +1,6 @@
-# Go Tasks API 🚀
+# Go RVN! API 🚀
 
-A lightweight and efficient task management API built with Go, featuring proper middleware chaining, Docker support, and RESTful design principles.
+Description here**
 
 ![Go Version](https://img.shields.io/badge/go-1.23.6-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -23,8 +23,8 @@ A lightweight and efficient task management API built with Go, featuring proper 
 
 ### Installation
 ```bash
-git clone https://github.com/yourusername/go-tasks-api.git
-cd go-tasks-api
+git clone https://github.com/yourusername/go-rvn-api.git
+cd go-rvn-api
 go mod download
 ```
 

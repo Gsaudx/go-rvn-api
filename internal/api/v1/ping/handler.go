@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/gsaudx/go-tasks-api/internal/api/common"
+	"github.com/gsaudx/go-rvn-api/internal/api/common"
 )
 
 // PingHandler handles the /ping endpoint request.

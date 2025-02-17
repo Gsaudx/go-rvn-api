@@ -9,11 +9,11 @@ import (
 	"syscall"
 	"time"
 
-	v1routes "github.com/gsaudx/go-tasks-api/internal/api/v1/routes"
-	"github.com/gsaudx/go-tasks-api/internal/config"
-	"github.com/gsaudx/go-tasks-api/internal/database"
-	"github.com/gsaudx/go-tasks-api/internal/middlewares"
-	pkgmiddlewares "github.com/gsaudx/go-tasks-api/pkg/middlewares"
+	v1routes "github.com/gsaudx/go-rvn-api/internal/api/v1/routes"
+	"github.com/gsaudx/go-rvn-api/internal/config"
+	"github.com/gsaudx/go-rvn-api/internal/database"
+	"github.com/gsaudx/go-rvn-api/internal/middlewares"
+	pkgmiddlewares "github.com/gsaudx/go-rvn-api/pkg/middlewares"
 )
 
 func main() {

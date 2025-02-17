@@ -3,7 +3,7 @@ package ping
 import (
 	"net/http"
 
-	"github.com/gsaudx/go-tasks-api/pkg/middlewares"
+	"github.com/gsaudx/go-rvn-api/pkg/middlewares"
 )
 
 // RegisterRoutes registers ping endpoint routes.
